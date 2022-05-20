@@ -11,8 +11,8 @@ type Square struct {
 
 func (s *Square) End() Point {
 	var end Point
-	end.x += int(s.a)
-	end.y += int(s.a)
+	end.x = s.start.x + int(s.a)
+	end.y += s.start.y + int(s.a)
 	return end
 }
 
